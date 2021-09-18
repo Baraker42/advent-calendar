@@ -1,12 +1,26 @@
+body{
+    background: linear-gradient(187deg, red, green, transparent);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
 .container{
     width: 80%;
     margin: 0 auto;
+}
+
+.opened-window{
+    width: 140px;
+    grid-template-columns: 1fr 2fr 1fr;
+    display: grid;
 }
 
 .window{
     width: 70px;
     height: 70px;
     border: solid 1px black;
+    display: grid;
 }
 
 .window-button{
@@ -17,6 +31,7 @@
     align-items: center;
     border: none;
     position: relative;
+    background-color: rgba(0,0,0,0.1);
 }
 
 .line {
@@ -26,7 +41,7 @@
     bottom: 0;
     width: 1px;
     z-index: 1;
-    border-left: dashed 2px #ccc;
+    border-left: dashed 2px #cccccc47;
 }
 
 .wordwrapper {
@@ -40,4 +55,17 @@
 .word {
     color: #000;
     font: bold 25px arial,sans-serif;
+}
+
+.left-window{
+    width: 30px;
+    height: 50px;
+    border: solid 1px black;
+    display: grid;
+}
+.right-window{
+    width: 30px;
+    height: 50px;
+    border: solid 1px black;
+    display: grid;
 }
