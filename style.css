@@ -1,0 +1,43 @@
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.window{
+    width: 70px;
+    height: 70px;
+    border: solid 1px black;
+}
+
+.window-button{
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    border: none;
+    position: relative;
+}
+
+.line {
+    position: absolute;
+    left: 49%;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    z-index: 1;
+    border-left: dashed 2px #ccc;
+}
+
+.wordwrapper {
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 2;
+}
+
+.word {
+    color: #000;
+    font: bold 25px arial,sans-serif;
+}
