@@ -41,44 +41,45 @@ const createWindows = function (){
 createWindows();
 
 const windowOpener = function (){
+  const date = new Date();
+  const month = date.getMonth();
+  const day = date.getDate();
   var getNumber = parseInt(document.activeElement.id);
-  console.log(24-getNumber,"days to christmas");
-  //var xmasNumber = document.getElementById(getNumber);
+  if (month == 9 && day >= getNumber){
+    console.log(24-getNumber,"days to christmas");
 
-  document.getElementById("invisible-right-" + getNumber).classList.add("visible-right")
-  document.getElementById("invisible-left-" +getNumber).classList.add("visible-left")
+    document.getElementById("invisible-right-" + getNumber).classList.add("visible-right")
+    document.getElementById("invisible-left-" +getNumber).classList.add("visible-left")
 
-  //vyprázdnění obsahu buttonu
-  let element = document.getElementById(getNumber);
-    while (element.firstChild) {
-  element.removeChild(element.firstChild);
-  }
-  document.getElementById(getNumber).classList.add("empty")
+    //vyprázdnění obsahu buttonu
+    let element = document.getElementById(getNumber);
+      while (element.firstChild) {
+    element.removeChild(element.firstChild);
+    }
+    document.getElementById(getNumber).classList.add("empty")
 
-  var song = document.createElement("div");
-  songId="song-"+getNumber
-  song.setAttribute("id",songId)
-  song.setAttribute("class","song-class")
-  song.innerHTML='<a href="https://www.youtube.com/watch?v=sE3uRRFVsmc">song</a>'
+    var song = document.createElement("div");
+    songId="song-"+getNumber
+    song.setAttribute("id",songId)
+    song.setAttribute("class","song-class")
+    song.innerHTML='<a href="https://www.youtube.com/watch?v=sE3uRRFVsmc">song</a>'
 
-  var photo =document.createElement("div");
-  photoId="photo"+getNumber
-  photo.setAttribute("id",photoId)
-  photo.setAttribute("class","photo-class");
-  photo.innerHTML="<p>Day photo</p><p>Show</p>"
+    var photo =document.createElement("div");
+    photoId="photo"+getNumber
+    photo.setAttribute("id",photoId)
+    photo.setAttribute("class","photo-class");
+    photo.innerHTML="<p>Day photo</p><p>Show</p>"
 
-  windowParent=document.getElementById(getNumber)
-  windowParent.appendChild(song)
-  windowParent.appendChild(photo)
+    windowParent=document.getElementById(getNumber)
+    windowParent.appendChild(song)
+    windowParent.appendChild(photo)
   
+  }else{
+  console.log("Too sooon")
+}
 };
 
 var xmasWindow = document.getElementsByClassName("window-button");
 for (var i = 0; i < xmasWindow.length; i++) {
     xmasWindow[i].addEventListener('click', windowOpener, false);
 }
-/*
-document.getElementById("1").addEventListener("click", function() {
-  //zviditelnění "okenic"
-  
-  }); */
