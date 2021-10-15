@@ -7,13 +7,14 @@ body{
 
 .container{
     width: 80%;
-    margin: 0 auto;
+    display: flex;
 }
 
 .opened-window{
     width: 140px;
     grid-template-columns: 1fr 2fr 1fr;
     display: grid;
+    margin: 20px 0 20px 0;
 }
 
 .window{
@@ -99,4 +100,17 @@ a{
     text-decoration: none;
     color: #000;
     font-weight: bold;
+}
+
+.window-column-0,
+.window-column-1,
+.window-column-2,
+.window-column-3{
+    margin:0 auto;
+}
+
+@media screen and (min-width: 401px) {
+    .container{
+        margin: 0 auto;
+    }
 }

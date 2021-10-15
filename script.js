@@ -4,7 +4,7 @@ const createWindows = function (){
   
   for (var i = 0; i <4; i++){
     var column = document.createElement("div");
-    column.setAttribute("class","window-column"+i);
+    column.setAttribute("class","window-column-"+i);
     singleWindow.appendChild(column);
     for (var j =0; j <6; j++){
         windowNumber = document.createElement("div");
