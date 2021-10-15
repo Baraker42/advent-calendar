@@ -49,7 +49,7 @@ const windowOpener = function (){
     console.log(24-getNumber,"days to christmas");
 
     document.getElementById("invisible-right-" + getNumber).classList.add("visible-right")
-    document.getElementById("invisible-left-" +getNumber).classList.add("visible-left")
+    document.getElementById("invisible-left-" + getNumber).classList.add("visible-left")
 
     //vyprázdnění obsahu buttonu
     let element = document.getElementById(getNumber);
@@ -68,7 +68,7 @@ const windowOpener = function (){
     photoId="photo"+getNumber
     photo.setAttribute("id",photoId)
     photo.setAttribute("class","photo-class");
-    photo.innerHTML="<p>Day photo</p><p>Show</p>"
+    photo.innerHTML="<p>Day photo</p><p><strong>Snow</p></strong>"
 
     windowParent=document.getElementById(getNumber)
     windowParent.appendChild(song)
