@@ -27,9 +27,13 @@ const createWindows = function (){
         windowRight = document.createElement("div");
         windowRight.setAttribute("id","invisible-right-"+counter);
         windowStart.appendChild(windowButton);
-        column.appendChild(windowLeft);
-        column.appendChild(windowStart);
-        column.appendChild(windowRight);
+        windowOpen = document.createElement("div");
+        windowOpen.setAttribute("class","opened-window")
+        windowOpen.setAttribute("id","window-"+counter)
+        windowOpen.appendChild(windowLeft);
+        windowOpen.appendChild(windowStart);
+        windowOpen.appendChild(windowRight);
+        column.appendChild(windowOpen)
         counter++
     }
   }
@@ -61,7 +65,7 @@ const windowOpener = function (){
   photoId="photo"+getNumber
   photo.setAttribute("id",photoId)
   photo.setAttribute("class","photo-class");
-  photo.innerHTML="<p>Day photo</p><br><p>Show</p>"
+  photo.innerHTML="<p>Day photo</p><p>Show</p>"
 
   windowParent=document.getElementById(getNumber)
   windowParent.appendChild(song)
