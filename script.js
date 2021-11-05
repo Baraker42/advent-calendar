@@ -26,6 +26,8 @@ dayList=[{"day":7,"song":"makarena","word":"carol"},
 const createWindows = function (){
   var singleWindow = document.getElementById("container");
   var counter = 0;
+  var adventCookies = document.cookie
+  var newcookies = adventCookies.split(";")
 
   for (var i = 0; i <4; i++){
     var column = document.createElement("div");
@@ -59,6 +61,7 @@ const createWindows = function (){
         windowOpen.appendChild(windowStart);
         windowOpen.appendChild(windowRight);
         column.appendChild(windowOpen)
+        document.cookie = counter=False+";max-age="+600;
         counter++
     }
   }
@@ -70,7 +73,7 @@ const windowOpener = function (){
   const month = date.getMonth();
   const day = date.getDate();
   var getNumber = parseInt(document.activeElement.id);
-  if (month == 9 && day >= getNumber){
+  if (month == 10 && day >= getNumber){
     console.log(24-getNumber,"days to christmas");
 
     document.getElementById("invisible-right-" + getNumber).classList.add("visible-right")
@@ -108,10 +111,6 @@ const windowOpener = function (){
   console.log("Too sooon")
 }
 };
-
-
-
-
 
 
 
