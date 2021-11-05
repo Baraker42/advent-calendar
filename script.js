@@ -61,7 +61,7 @@ const createWindows = function (){
         windowOpen.appendChild(windowStart);
         windowOpen.appendChild(windowRight);
         column.appendChild(windowOpen)
-        document.cookie = counter=False+";max-age="+600;
+        document.cookie = "first="+dayList[counter]+";max-age="+600;
         counter++
     }
   }
