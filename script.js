@@ -27,7 +27,7 @@ const createWindows = function (){
   var singleWindow = document.getElementById("container");
   var counter = 0;
   var adventCookies = document.cookie
-  var newcookies = adventCookies.split(";")
+  adventCookies = adventCookies.split(";")
 
   for (var i = 0; i <4; i++){
     var column = document.createElement("div");
@@ -37,6 +37,10 @@ const createWindows = function (){
         windowNumber = document.createElement("div");
         windowNumber.setAttribute("class","number");
         windowNumber.innerHTML = dayList[counter].day;
+        openChecker=adventCookies[counter]
+        if (openChecker.includes("false")){
+          console.log(counter,openChecker)
+        }
         numberWrapper = document.createElement("div");
         numberWrapper.setAttribute("class","number-wrapper");
         numberWrapper.appendChild(windowNumber);
