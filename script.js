@@ -5,8 +5,8 @@ dayList=[{"day":7,"song":"https://www.youtube.com/watch?v=ath8jKJ96kc&ab_channel
 {"day":16,"song":"https://www.youtube.com/watch?v=CO6OZIY-lYw&ab_channel=HomeFree","word":"Star"},
 {"day":8,"song":"https://www.youtube.com/watch?v=lGJoPmGA5uc&ab_channel=HomeFree","word":"Festive food"},
 {"day":1,"song":"makarena","word":"carol"},
-{"day":6,"song":"makarena","word":"carol"},
-{"day":20,"song":"makarena","word":"carol"},
+{"day":6,"song":"https://www.youtube.com/watch?v=wIQQDYaoWpc&ab_channel=HomeFree","word":"Sparkle"},//Bethlehem
+{"day":20,"song":"https://www.youtube.com/watch?v=dSJ4EWeHyE4&ab_channel=CelticWomenVEVO","word":"Christmas cookies"},
 {"day":19,"song":"makarena","word":"carol"},
 {"day":23,"song":"makarena","word":"carol"},
 {"day":12,"song":"makarena","word":"carol"},
@@ -81,13 +81,14 @@ const createWindows = function (){
           windowParent.appendChild(song);
           windowParent.appendChild(photo);
         }
-
+        //if there is no true cookie for this day print closed window
         else{
         numberWrapper = document.createElement("div");
         numberWrapper.setAttribute("class","number-wrapper");
         numberWrapper.appendChild(windowNumber);
         windowLine = document.createElement("div");
         windowLine.setAttribute("class",("line"));
+
         windowButton = document.createElement("button");
         windowButton.setAttribute("class","window-button");
         windowButton.setAttribute("id",dayList[counter].day);
