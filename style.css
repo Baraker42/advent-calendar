@@ -118,6 +118,17 @@ body{
 .empty{
     background-color: rgba(219, 214, 205, 0.973);
     display: grid;
+    text-align:center;
+}
+
+.empty a{
+    font-size:20px;
+    font-family:sans-serif;
+}
+
+.empty p{
+    font-size:15px;
+    font-family:sans-serif;
 }
 
 p{

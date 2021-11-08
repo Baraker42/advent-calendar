@@ -40,7 +40,54 @@ const createWindows = function (){
         //if rule when based on cookies recongnize open window in past
         if(adventCookies.includes("day"+dayList[counter].day+"=true")){
           console.log(dayList[counter].day)
+            numberWrapper = document.createElement("div");
+            numberWrapper.setAttribute("class","number-wrapper");
+            numberWrapper.appendChild(windowNumber);
+            windowLine = document.createElement("div");
+            windowLine.setAttribute("class",("line"));
+            windowButton = document.createElement("div");
+            windowButton.setAttribute("class","window-button empty");
+            windowButton.setAttribute("id",dayList[counter].day);
+            windowLeft = document.createElement("div");
+            windowLeft.setAttribute("class","visible-left");
+            windowLeft.setAttribute("id","invisible-left-"+dayList[counter].day);
+            windowStart = document.createElement("div");
+            windowStart.setAttribute("class","window");
+            windowRight = document.createElement("div");
+            windowRight.setAttribute("class","visible-right");
+            windowRight.setAttribute("id","invisible-right-"+dayList[counter].day);
+            windowStart.appendChild(windowButton);
+            windowOpen = document.createElement("div");
+            windowOpen.setAttribute("class","opened-window")
+            windowOpen.setAttribute("id","window-"+dayList[counter].day)
+            windowOpen.appendChild(windowLeft);
+            windowOpen.appendChild(windowStart);
+            windowOpen.appendChild(windowRight);
+            column.appendChild(windowOpen);
+            for (var d = 0; d < dayList.length; d++) {
+              if (dayList[d].day==dayList[counter].day){
+              daySong=dayList[d].song
+              dayWord=dayList[d].word
+              }
+            }
+
+            var song = document.createElement("div");
+            songId="song-"+dayList[counter].day
+            song.setAttribute("id",songId)
+            song.setAttribute("class","song-class")
+            song.innerHTML="<a href="+daySong+">song</a>"
+
+            var photo =document.createElement("div");
+            photoId="photo"+dayList[counter].day
+            photo.setAttribute("id",photoId)
+            photo.setAttribute("class","photo-class");
+            photo.innerHTML="<p>Day photo</p><p><strong>"+dayWord+"</p></strong>"
+
+            windowParent=document.getElementById(dayList[counter].day);
+            windowParent.appendChild(song);
+            windowParent.appendChild(photo);
         }
+        else{
         numberWrapper = document.createElement("div");
         numberWrapper.setAttribute("class","number-wrapper");
         numberWrapper.appendChild(windowNumber);
@@ -64,13 +111,15 @@ const createWindows = function (){
         windowOpen.appendChild(windowLeft);
         windowOpen.appendChild(windowStart);
         windowOpen.appendChild(windowRight);
-        column.appendChild(windowOpen)
+        column.appendChild(windowOpen);
         document.cookie = "day"+dayList[counter].day+"="+false+";max-age="+600;
+        }
         counter++
     }
   }
 };
 createWindows();
+
 
 const windowOpener = function (){
   const date = new Date();
@@ -110,7 +159,7 @@ const windowOpener = function (){
     windowParent=document.getElementById(getNumber)
     windowParent.appendChild(song)
     windowParent.appendChild(photo)
-
+    document.cookie ="day"+getNumber+"="+true+";max-age="+600
   }else{
   console.log("Too sooon")
 }
