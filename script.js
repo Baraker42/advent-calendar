@@ -1,9 +1,9 @@
-dayList=[{"day":7,"song":"makarena","word":"carol"},
-{"day":2,"song":"makarena","word":"carol"},
-{"day":14,"song":"makarena","word":"carol"},
-{"day":21,"song":"makarena","word":"carol"},
-{"day":16,"song":"makarena","word":"carol"},
-{"day":8,"song":"makarena","word":"carol"},
+dayList=[{"day":7,"song":"https://www.youtube.com/watch?v=ath8jKJ96kc&ab_channel=HomeFree","word":"Ligths"},//zatím
+{"day":2,"song":"https://www.youtube.com/watch?v=U7C4Ym-XQUI&ab_channel=PeterHollens","word":"Carols / Music"},//zatím
+{"day":14,"song":"https://www.youtube.com/watch?v=-bnzUHzsma0&ab_channel=PeterHollens","word":"Movie/TV Series"},//zatím
+{"day":21,"song":"https://www.youtube.com/watch?v=8tC5NSyY_lQ&ab_channel=PeterHollens","word":"Love"},//zatím
+{"day":16,"song":"https://www.youtube.com/watch?v=CO6OZIY-lYw&ab_channel=HomeFree","word":"Star"},
+{"day":8,"song":"https://www.youtube.com/watch?v=lGJoPmGA5uc&ab_channel=HomeFree","word":"Festive food"},
 {"day":1,"song":"makarena","word":"carol"},
 {"day":6,"song":"makarena","word":"carol"},
 {"day":20,"song":"makarena","word":"carol"},
@@ -40,53 +40,54 @@ const createWindows = function (){
         //if rule when based on cookies recongnize open window in past
         if(adventCookies.includes("day"+dayList[counter].day+"=true")){
           console.log(dayList[counter].day)
-            numberWrapper = document.createElement("div");
-            numberWrapper.setAttribute("class","number-wrapper");
-            numberWrapper.appendChild(windowNumber);
-            windowLine = document.createElement("div");
-            windowLine.setAttribute("class",("line"));
-            windowButton = document.createElement("div");
-            windowButton.setAttribute("class","window-button empty");
-            windowButton.setAttribute("id",dayList[counter].day);
-            windowLeft = document.createElement("div");
-            windowLeft.setAttribute("class","visible-left");
-            windowLeft.setAttribute("id","invisible-left-"+dayList[counter].day);
-            windowStart = document.createElement("div");
-            windowStart.setAttribute("class","window");
-            windowRight = document.createElement("div");
-            windowRight.setAttribute("class","visible-right");
-            windowRight.setAttribute("id","invisible-right-"+dayList[counter].day);
-            windowStart.appendChild(windowButton);
-            windowOpen = document.createElement("div");
-            windowOpen.setAttribute("class","opened-window")
-            windowOpen.setAttribute("id","window-"+dayList[counter].day)
-            windowOpen.appendChild(windowLeft);
-            windowOpen.appendChild(windowStart);
-            windowOpen.appendChild(windowRight);
-            column.appendChild(windowOpen);
-            for (var d = 0; d < dayList.length; d++) {
-              if (dayList[d].day==dayList[counter].day){
-              daySong=dayList[d].song
-              dayWord=dayList[d].word
-              }
+          numberWrapper = document.createElement("div");
+          numberWrapper.setAttribute("class","number-wrapper");
+          numberWrapper.appendChild(windowNumber);
+          windowLine = document.createElement("div");
+          windowLine.setAttribute("class",("line"));
+          windowButton = document.createElement("div");
+          windowButton.setAttribute("class","window-button empty");
+          windowButton.setAttribute("id",dayList[counter].day);
+          windowLeft = document.createElement("div");
+          windowLeft.setAttribute("class","visible-left");
+          windowLeft.setAttribute("id","invisible-left-"+dayList[counter].day);
+          windowStart = document.createElement("div");
+          windowStart.setAttribute("class","window");
+          windowRight = document.createElement("div");
+          windowRight.setAttribute("class","visible-right");
+          windowRight.setAttribute("id","invisible-right-"+dayList[counter].day);
+          windowStart.appendChild(windowButton);
+          windowOpen = document.createElement("div");
+          windowOpen.setAttribute("class","opened-window")
+          windowOpen.setAttribute("id","window-"+dayList[counter].day)
+          windowOpen.appendChild(windowLeft);
+          windowOpen.appendChild(windowStart);
+          windowOpen.appendChild(windowRight);
+          column.appendChild(windowOpen);
+
+          for (var d = 0; d < dayList.length; d++) {
+            if (dayList[d].day==dayList[counter].day){
+            daySong=dayList[d].song
+            dayWord=dayList[d].word
             }
+          }
+          var song = document.createElement("div");
+          songId="song-"+dayList[counter].day
+          song.setAttribute("id",songId)
+          song.setAttribute("class","song-class")
+          song.innerHTML="<a href="+daySong+">song</a>"
 
-            var song = document.createElement("div");
-            songId="song-"+dayList[counter].day
-            song.setAttribute("id",songId)
-            song.setAttribute("class","song-class")
-            song.innerHTML="<a href="+daySong+">song</a>"
+          var photo =document.createElement("div");
+          photoId="photo"+dayList[counter].day
+          photo.setAttribute("id",photoId)
+          photo.setAttribute("class","photo-class");
+          photo.innerHTML="<p>Day photo</p><p><strong>"+dayWord+"</p></strong>"
 
-            var photo =document.createElement("div");
-            photoId="photo"+dayList[counter].day
-            photo.setAttribute("id",photoId)
-            photo.setAttribute("class","photo-class");
-            photo.innerHTML="<p>Day photo</p><p><strong>"+dayWord+"</p></strong>"
-
-            windowParent=document.getElementById(dayList[counter].day);
-            windowParent.appendChild(song);
-            windowParent.appendChild(photo);
+          windowParent=document.getElementById(dayList[counter].day);
+          windowParent.appendChild(song);
+          windowParent.appendChild(photo);
         }
+
         else{
         numberWrapper = document.createElement("div");
         numberWrapper.setAttribute("class","number-wrapper");
