@@ -27,7 +27,6 @@ const createWindows = function (){
   var singleWindow = document.getElementById("container");
   var counter = 0;
   var adventCookies = document.cookie
-  console.log(adventCookies)
 
   for (var i = 0; i <4; i++){
     var column = document.createElement("div");
@@ -37,29 +36,24 @@ const createWindows = function (){
         windowNumber = document.createElement("div");
         windowNumber.setAttribute("class","number");
         windowNumber.innerHTML = dayList[counter].day;
+        windowButton = document.createElement("div");
+        windowButton.setAttribute("class","window-button empty");
+        windowButton.setAttribute("id",dayList[counter].day);
+        windowLeft = document.createElement("div");
+        windowLeft.setAttribute("id","invisible-left-"+dayList[counter].day);
+        windowStart = document.createElement("div");
+        windowStart.setAttribute("class","window");
+        windowRight = document.createElement("div");
+        windowRight.setAttribute("id","invisible-right-"+dayList[counter].day);
+        windowStart.appendChild(windowButton);
+        windowOpen = document.createElement("div");
+        windowOpen.setAttribute("class","opened-window")
+        windowOpen.setAttribute("id","window-"+dayList[counter].day)
+
         //if rule when based on cookies recongnize open window in past
         if(adventCookies.includes("day"+dayList[counter].day+"=true")){
-          console.log(dayList[counter].day)
-          numberWrapper = document.createElement("div");
-          numberWrapper.setAttribute("class","number-wrapper");
-          numberWrapper.appendChild(windowNumber);
-          windowLine = document.createElement("div");
-          windowLine.setAttribute("class",("line"));
-          windowButton = document.createElement("div");
-          windowButton.setAttribute("class","window-button empty");
-          windowButton.setAttribute("id",dayList[counter].day);
-          windowLeft = document.createElement("div");
-          windowLeft.setAttribute("class","visible-left");
-          windowLeft.setAttribute("id","invisible-left-"+dayList[counter].day);
-          windowStart = document.createElement("div");
-          windowStart.setAttribute("class","window");
-          windowRight = document.createElement("div");
+          windowLeft.setAttribute("class","visible-left");;
           windowRight.setAttribute("class","visible-right");
-          windowRight.setAttribute("id","invisible-right-"+dayList[counter].day);
-          windowStart.appendChild(windowButton);
-          windowOpen = document.createElement("div");
-          windowOpen.setAttribute("class","opened-window")
-          windowOpen.setAttribute("id","window-"+dayList[counter].day)
           windowOpen.appendChild(windowLeft);
           windowOpen.appendChild(windowStart);
           windowOpen.appendChild(windowRight);
@@ -75,7 +69,7 @@ const createWindows = function (){
           songId="song-"+dayList[counter].day
           song.setAttribute("id",songId)
           song.setAttribute("class","song-class")
-          song.innerHTML="<a href="+daySong+">song</a>"
+          song.innerHTML="<a href="+daySong+"target='_blank'>song</a>"
 
           var photo =document.createElement("div");
           photoId="photo"+dayList[counter].day
@@ -99,12 +93,8 @@ const createWindows = function (){
         windowButton.setAttribute("id",dayList[counter].day);
         windowButton.appendChild(windowLine);
         windowButton.appendChild(numberWrapper);
-        windowLeft = document.createElement("div");
-        windowLeft.setAttribute("id","invisible-left-"+dayList[counter].day);
         windowStart = document.createElement("div");
         windowStart.setAttribute("class","window");
-        windowRight = document.createElement("div");
-        windowRight.setAttribute("id","invisible-right-"+dayList[counter].day);
         windowStart.appendChild(windowButton);
         windowOpen = document.createElement("div");
         windowOpen.setAttribute("class","opened-window")
