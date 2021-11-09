@@ -21,11 +21,15 @@ body{
 
 .test h1{
     font-size: 50px;
-    margin: 20px 0 20px 0;
+
+    margin: 40px 0 20px 0;
     text-align: center;
-    color:rgb(170, 170, 170);
+    color:rgb(219, 215, 215);
     font-family: "Architects Daughter";
     letter-spacing: 15px;
+    background-color:rgba(0, 0, 0, 0.338);
+    
+
 }
 .description{
     width: 60%;
