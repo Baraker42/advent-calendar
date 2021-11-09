@@ -159,7 +159,7 @@ const windowOpener = function (){
 
 var createSnow = function (){
   var snowing = document.getElementById("snowflakes")
-  snowflakesList = ["❅","❆","❅","❆","❅","❆","❅","❆","❅","❆","❅","❆"];
+  snowflakesList = ["❅","❆","❅","❆","❅","❆","❅","❆","❅","❆","❅","❆","❅","❆","❆","❅","❆"];
   for (var i = 0; i<snowflakesList.length; i++){
     snowflake=document.createElement("div");
     snowflake.setAttribute("class","snowflake");
