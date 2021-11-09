@@ -1,9 +1,10 @@
 body{
-    background: linear-gradient(176deg, rgb(1, 33, 211),rgb(48, 90, 230) 40%, rgb(135, 169, 241));
+    background-image: url("christmas-bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    height: 80vmax;
+
+    /*height: 80vmax;*/
 }
 
 #container{
@@ -22,22 +23,25 @@ body{
     font-size: 50px;
     margin: 20px 0 20px 0;
     text-align: center;
-    color:rgb(218, 2, 2);
+    color:rgb(170, 170, 170);
     font-family: "Architects Daughter";
+    letter-spacing: 15px;
 }
 .description{
-    width: 80%;
+    width: 60%;
     display: block;
     margin: 0 auto;
     margin-bottom: 20px;
-    color:rgba(6, 184, 36,1)
+    color:rgb(198, 206, 200)
 }
+
 .description p{
     font-size:20px;
-    font-family: "Architects Daughter";
+    font-family: "arial";
     font-weight: bold;
     text-align: center;
     line-height: 40px;
+    background-color:rgba(0, 0, 0, 0.338);
 }
 
 .opened-window{
@@ -64,7 +68,7 @@ body{
     align-items: center;
     border: none;
     position: relative;
-    background-color: rgba(0,0,0,0.1);
+    background-color: rgba(39, 36, 36, 0.725);
     border-radius: 8px;
 }
 
@@ -87,10 +91,10 @@ body{
 }
 
 .number {
-    color: #000;
+    color: rgb(156, 154, 154);
     font-size: 30px;
     font-weight: bold;
-    font-family: "Architects Daughter";
+    font-family: "arial";
     letter-spacing:2px;
 }
 
@@ -130,12 +134,12 @@ body{
 
 .empty a{
     font-size:20px;
-    font-family:"Architects Daughter";
+    font-family:"arial";
 }
 
 .empty p{
     font-size:13px;
-    font-family:"Architects Daughter";
+    font-family:"arial";
 }
 
 p{
