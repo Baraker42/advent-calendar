@@ -69,7 +69,7 @@ const createWindows = function (){
           songId="song-"+dayList[counter].day
           song.setAttribute("id",songId)
           song.setAttribute("class","song-class")
-          song.innerHTML="<a href="+daySong+"target='_blank'>song</a>"
+          song.innerHTML="<a href="+daySong+" target='_blank'>song</a>"
 
           var photo =document.createElement("div");
           photoId="photo"+dayList[counter].day
@@ -140,7 +140,7 @@ const windowOpener = function (){
     songId="song-"+getNumber
     song.setAttribute("id",songId)
     song.setAttribute("class","song-class")
-    song.innerHTML="<a href="+daySong+">song</a>"
+    song.innerHTML="<a href="+daySong+" target='_blank'>song</a>"
 
     var photo =document.createElement("div");
     photoId="photo"+getNumber
@@ -157,6 +157,17 @@ const windowOpener = function (){
 }
 };
 
+var createSnow = function (){
+  var snowing = document.getElementById("snowflakes")
+  snowflakesList = ["❅","❆","❅","❆","❅","❆","❅","❆","❅","❆","❅","❆"];
+  for (var i = 0; i<snowflakesList.length; i++){
+    snowflake=document.createElement("div");
+    snowflake.setAttribute("class","snowflake");
+    snowflake.innerHTML=(snowflakesList[i]);
+    snowing.appendChild(snowflake);
+  }
+  }
+createSnow();
 
 
 var xmasWindow = document.getElementsByClassName("window-button");
