@@ -1,8 +1,8 @@
 dayList=[{"day":7,"song":"https://www.youtube.com/watch?v=2fAG2yv-o5A&t=1s&ab_channel=CelticWomanOfficial","word":"Cozy place"},
-{"day":2,"song":"https://www.youtube.com/watch?v=U7C4Ym-XQUI&ab_channel=PeterHollens","word":"Carols / Music"},//zatím
-{"day":14,"song":"https://www.youtube.com/watch?v=-bnzUHzsma0&ab_channel=PeterHollens","word":"Movie/TV Series"},//zatím
-{"day":21,"song":"https://www.youtube.com/watch?v=8tC5NSyY_lQ&ab_channel=PeterHollens","word":"Family"},//zatím
-{"day":16,"song":"https://www.youtube.com/watch?v=CO6OZIY-lYw&ab_channel=HomeFree","word":"Star"},
+{"day":2,"song":"https://www.youtube.com/watch?v=U7C4Ym-XQUI&ab_channel=PeterHollens","word":"Carols / Music"},
+{"day":14,"song":"https://www.youtube.com/watch?v=-bnzUHzsma0&ab_channel=PeterHollens","word":"Movie/TV Series"},
+{"day":21,"song":"https://www.youtube.com/watch?v=8tC5NSyY_lQ&ab_channel=PeterHollens","word":"Family"},
+{"day":16,"song":"https://www.youtube.com/watch?v=CO6OZIY-lYw&ab_channel=HomeFree","word":"Lights"},
 {"day":8,"song":"https://www.youtube.com/watch?v=QARJ4-nI7rI&ab_channel=TheHound%2BTheFox","word":"Ornaments"},
 {"day":1,"song":"https://www.youtube.com/watch?v=u-SGx53zpuI&ab_channel=CelticWomanOfficial","word":"Wreath"},
 {"day":6,"song":"https://www.youtube.com/watch?v=wIQQDYaoWpc&ab_channel=HomeFree","word":"Sparkle"},
@@ -10,7 +10,7 @@ dayList=[{"day":7,"song":"https://www.youtube.com/watch?v=2fAG2yv-o5A&t=1s&ab_ch
 {"day":19,"song":"https://www.youtube.com/watch?v=fzOG99GEmoM&ab_channel=CelticWomanKorea","word":"Christmas jumper"},
 {"day":23,"song":"https://www.youtube.com/watch?v=lGJoPmGA5uc&ab_channel=HomeFree","word":"Festive food"},
 {"day":12,"song":"https://www.youtube.com/watch?v=VDmIddF7DfQ&ab_channel=CelticWomenVEVO","word":"Bethlehem"},
-{"day":13,"song":"https://www.youtube.com/watch?v=ath8jKJ96kc&ab_channel=HomeFree","word":"Lights"},//zatím
+{"day":13,"song":"https://www.youtube.com/watch?v=ath8jKJ96kc&ab_channel=HomeFree","word":"Stocking"},
 {"day":3,"song":"https://www.youtube.com/watch?v=E_JTbBNxZ1I&ab_channel=CelticWomanOfficial","word":"Candy cane"},
 {"day":24,"song":"https://www.youtube.com/watch?v=e_RAdKHW2Qk&ab_channel=CelticWomanOfficial","word":"Christmas tree"},
 {"day":5,"song":"https://www.youtube.com/watch?v=7uyb2q18aPY&ab_channel=CelticWomanOfficial","word":"Jingle bell"},
@@ -104,7 +104,7 @@ const createWindows = function (){
         windowOpen.appendChild(windowStart);
         windowOpen.appendChild(windowRight);
         column.appendChild(windowOpen);
-        document.cookie = "day"+dayList[counter].day+"="+false+";max-age="+600;
+        document.cookie = "day"+dayList[counter].day+"="+false+";expires=Sat, 01 Jan 2022 1:11:11 GMT";;
         }
         counter++
     }
