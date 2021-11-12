@@ -180,6 +180,20 @@ a{
     }
     .main-content h1{
         width: 100%;
+        font-size:40px;
+    }
+    .opened-window{
+        width: 170px;
+    }
+    .window{
+        width:85px;
+        height:85px;
+    }
+    .left-window{
+        width:42.5px
+    }
+    .right-window{
+        width:42.5px;
     }
 
 }
