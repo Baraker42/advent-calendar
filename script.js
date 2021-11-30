@@ -17,7 +17,7 @@ dayList=[{"day":7,"song":"https://www.youtube.com/watch?v=2fAG2yv-o5A&t=1s&ab_ch
 {"day":22,"song":"https://www.youtube.com/watch?v=eEtUGgBwzEM&ab_channel=TheHound%2BTheFox","word":"Mistletoe"},
 {"day":18,"song":"https://www.youtube.com/watch?v=duXeChMFTzg&ab_channel=TheHound%2BTheFox","word":"Angel"},
 {"day":10,"song":"https://www.youtube.com/watch?v=xME52v35ofU&ab_channel=HomeFree","word":"Candle"},
-{"day":9,"song":"https://www.youtube.com/watch?v=6c8GlSb6XlA&ab_channel=HomeFree","word":"Reindeer"},
+{"day":9,"song":"https://www.youtube.com/watch?v=6c8GlSb6XlA&t=228s&ab_channel=HomeFree","word":"Reindeer"},
 {"day":4,"song":"https://www.youtube.com/watch?v=SiF8EsvfCWk&ab_channel=GrimReaper","word":"Holly"},
 {"day":17,"song":"https://www.youtube.com/watch?v=tT61n0VFr5I&ab_channel=PeterHollens","word":"Memories"},
 {"day":11,"song":"https://www.youtube.com/watch?v=Ab0ArBnZYSE&ab_channel=CelticWomanForumnet","word":"Snow"},
@@ -104,7 +104,7 @@ const createWindows = function (){
         windowOpen.appendChild(windowStart);
         windowOpen.appendChild(windowRight);
         column.appendChild(windowOpen);
-        document.cookie = "day"+dayList[counter].day+"="+false+";expires=Sat, 01 Jan 2022 1:11:11 GMT";;
+        document.cookie = "day"+dayList[counter].day+"="+false+";expires=Sat, 01 Jan 2022 1:11:11 GMT";
         }
         counter++
     }
@@ -151,7 +151,7 @@ const windowOpener = function (){
     windowParent=document.getElementById(getNumber)
     windowParent.appendChild(song)
     windowParent.appendChild(photo)
-    document.cookie ="day"+getNumber+"="+true+";max-age="+600
+    document.cookie ="day"+getNumber+"="+true+";expires=Sat, 01 Jan 2022 1:11:11 GMT";
   }else{
   console.log("Too sooon")
 }
