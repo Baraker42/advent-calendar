@@ -1,4 +1,4 @@
-dayList=[{"day":7,"song":"https://www.youtube.com/watch?v=2fAG2yv-o5A&t=1s&ab_channel=CelticWomanOfficial","word":"Cozy place"},
+dayList=[{"day":7,"song":"https://www.youtube.com/watch?v=2fAG2yv-o5A&ab_channel=CelticWomanOfficial","word":"Cozy place"},
 {"day":2,"song":"https://www.youtube.com/watch?v=U7C4Ym-XQUI&ab_channel=PeterHollens","word":"Carols / Music"},
 {"day":14,"song":"https://www.youtube.com/watch?v=-bnzUHzsma0&ab_channel=PeterHollens","word":"Movie/TV Series"},
 {"day":21,"song":"https://www.youtube.com/watch?v=8tC5NSyY_lQ&ab_channel=PeterHollens","word":"Family"},
@@ -17,7 +17,7 @@ dayList=[{"day":7,"song":"https://www.youtube.com/watch?v=2fAG2yv-o5A&t=1s&ab_ch
 {"day":22,"song":"https://www.youtube.com/watch?v=eEtUGgBwzEM&ab_channel=TheHound%2BTheFox","word":"Mistletoe"},
 {"day":18,"song":"https://www.youtube.com/watch?v=duXeChMFTzg&ab_channel=TheHound%2BTheFox","word":"Angel"},
 {"day":10,"song":"https://www.youtube.com/watch?v=xME52v35ofU&ab_channel=HomeFree","word":"Candle"},
-{"day":9,"song":"https://www.youtube.com/watch?v=6c8GlSb6XlA&t=228s&ab_channel=HomeFree","word":"Reindeer"},
+{"day":9,"song":"https://www.youtube.com/watch?v=6c8GlSb6XlA&ab_channel=HomeFree","word":"Reindeer"},
 {"day":4,"song":"https://www.youtube.com/watch?v=SiF8EsvfCWk&ab_channel=GrimReaper","word":"Holly"},
 {"day":17,"song":"https://www.youtube.com/watch?v=tT61n0VFr5I&ab_channel=PeterHollens","word":"Memories"},
 {"day":11,"song":"https://www.youtube.com/watch?v=Ab0ArBnZYSE&ab_channel=CelticWomanForumnet","word":"Snow"},
@@ -118,9 +118,7 @@ const windowOpener = function (){
   const month = date.getMonth();
   const day = date.getDate();
   var getNumber = parseInt(document.activeElement.id);
-  if (month == 10 && day >= getNumber){
-    console.log(24-getNumber,"days to christmas");
-
+  if (month == 11 && day >= getNumber){
     document.getElementById("invisible-right-" + getNumber).classList.add("visible-right")
     document.getElementById("invisible-left-" + getNumber).classList.add("visible-left")
     for (var i = 0; i < dayList.length; i++) {
@@ -153,7 +151,6 @@ const windowOpener = function (){
     windowParent.appendChild(photo)
     document.cookie ="day"+getNumber+"="+true+";expires=Sat, 01 Jan 2022 1:11:11 GMT";
   }else{
-  console.log("Too sooon")
 }
 };
 
