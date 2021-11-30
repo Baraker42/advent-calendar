@@ -168,7 +168,7 @@ a{
     margin:0 auto;
 }
 
-@media screen and (max-width: 401px) {
+@media screen and (max-width: 460px) {
     #container{
         margin: 0 auto;
         width: 100%;
