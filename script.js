@@ -8,7 +8,7 @@ dayList=[{"day":7,"song":"https://www.youtube.com/watch?v=2fAG2yv-o5A&t=1s&ab_ch
 {"day":6,"song":"https://www.youtube.com/watch?v=wIQQDYaoWpc&ab_channel=HomeFree","word":"Sparkle"},
 {"day":20,"song":"https://www.youtube.com/watch?v=dSJ4EWeHyE4&ab_channel=CelticWomenVEVO","word":"Christmas cookies"},
 {"day":19,"song":"https://www.youtube.com/watch?v=fzOG99GEmoM&ab_channel=CelticWomanKorea","word":"Christmas jumper"},
-{"day":23,"song":"https://www.youtube.com/watch?v=lGJoPmGA5uc&ab_channel=HomeFree","word":"Festive food"},
+{"day":23,"song":"https://www.youtube.com/watch?v=lGJoPmGA5uc&ab_channel=HomeFree","word":"Hot beverage"},
 {"day":12,"song":"https://www.youtube.com/watch?v=VDmIddF7DfQ&ab_channel=CelticWomenVEVO","word":"Bethlehem"},
 {"day":13,"song":"https://www.youtube.com/watch?v=ath8jKJ96kc&ab_channel=HomeFree","word":"Stocking"},
 {"day":3,"song":"https://www.youtube.com/watch?v=E_JTbBNxZ1I&ab_channel=CelticWomanOfficial","word":"Candy cane"},
